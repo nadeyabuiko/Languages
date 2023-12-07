@@ -4,6 +4,7 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BUTTON_VIEW_BASKET = (By.XPATH, ("//div[@class = 'basket-mini pull-right hidden-xs']//a[@class='btn btn-default']"))
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")

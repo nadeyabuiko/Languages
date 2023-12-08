@@ -4,6 +4,7 @@ import secrets
 import string
 import faker
 
+
 class LoginPage(BasePage):
     def should_be_login_page(self):
         self.should_be_login_url()
@@ -29,4 +30,3 @@ class LoginPage(BasePage):
         browser.find_element(*LoginPageLocators.PASSWORD_REGISTER).send_keys(password)
         browser.find_element(*LoginPageLocators.CONFIRM_PASSWORD_REGISTER).send_keys(password)
         browser.find_element(*LoginPageLocators.REGISTER_BUTTON).click()
-

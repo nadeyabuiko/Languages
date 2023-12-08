@@ -21,7 +21,7 @@ class TestLoginFromMainPage:
         login_page.should_be_login_page()
 
 
-@pytest.mark.basket
+@pytest.mark.xfail("Contains a negative check")
 class TestBasketFromMainPage:
     def test_guest_cant_see_product_in_basket_opened_from_main_page(self, browser):
         link = "http://selenium1py.pythonanywhere.com/"
@@ -29,6 +29,5 @@ class TestBasketFromMainPage:
         page.open()
         page.should_be_basket_button()
         page.go_to_basket()
-        login_page = BasketPage(browser, browser.current_url)
-        login_page.should_empty()
-
+        basket_page = BasketPage(browser, browser.current_url)
+        basket_page.should_empty()

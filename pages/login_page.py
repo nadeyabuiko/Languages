@@ -20,7 +20,7 @@ class LoginPage(BasePage):
     def should_be_register_form(self):
         assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "Registration form is not presented"
 
-    def register_new_user(self, browser):
+    def registration_new_user(self, browser):
         alphabet = string.ascii_letters + string.digits
         password = ''.join(secrets.choice(alphabet) for i in range(9))
 
